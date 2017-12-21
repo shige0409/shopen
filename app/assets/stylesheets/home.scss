@@ -1,3 +1,58 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@mixin trans($color: #000000, $z_index: 0, $x: 0px, $y: 0px){
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  z-index: $z_index;
+  background-color: $color;
+  position: absolute;
+  top: 43%;
+  left: 43%;
+  transition: 1.0s;
+  &:hover{
+    transform: translate($x,$y);
+  }
+}
+body {
+  text-align: center;
+
+  .red {
+    color: red;
+  }
+
+  .nav {
+    font-size: 0.8em;
+
+    h1 {
+      font-size: 0.5em;
+    }
+
+    p {
+      font-size: 0.3em;
+    }
+  }
+
+  .login-form {
+    margin: 30px auto;
+    background-color: gray;
+  }
+
+  .transform{
+    $range : 200px;
+    $range_ : (-1*$range);
+    .blue{
+      @include trans(blue, 1, $range_, $range);
+    }
+    .red{
+      @include trans(red, 2, $range_, $range_);
+    }
+    .yellow{
+      @include trans(yellow, 3, $range, $range_);
+    }
+    .green{
+      @include trans(green, 4, $range, $range);
+    }
+  }
+}

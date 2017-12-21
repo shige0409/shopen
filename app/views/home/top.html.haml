@@ -1,2 +1,18 @@
-%h1 Home#top
-%p Find me in app/views/home/top.html.haml
+.container
+  .logo
+    %h1 Home#top
+  %nav.container.red
+    - h1 = 'ホームページ'
+    %h1="h1=> #{h1}"
+    %p Find me in app/views/home/top.html.haml
+  .login-form
+    %p
+      %input{'type': 'text', 'placeholder': 'name'}
+      %input{'type': 'password'}
+    %p
+      %input{'type': 'submit'}
+  .transform
+    .blue
+    .red
+    .yellow
+    .green
