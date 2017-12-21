@@ -2,9 +2,12 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title FlitApp
-    = render 'layouts/shim'
+    %title= FlitApp
+    = render 'layouts/rails_default'
   %body
     = render 'layouts/header'
     = yield
     = render 'layouts/footer'
+    - a = "test print * 10"
+    - 10.times do |i|
+      %p #{i}
