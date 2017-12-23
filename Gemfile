@@ -14,6 +14,7 @@ gem 'bootstrap-sass'
 gem 'puma', '~> 3.7'
 # User Haml as html.erb for simplicity
 gem "haml-rails"
+gem 'bcrypt'
 gem 'jquery-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
