@@ -1,21 +1,6 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-/*@mixin trans($color: #000000, $z_index: 0, $x: 0px, $y: 0px){
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  z-index: $z_index;
-  background-color: $color;
-  position: absolute;
-  top: 43%;
-  left: 43%;
-  transition: 1.0s;
-  &:hover{
-    transform: translate($x,$y);
-  }
-}
-*/
 body {
   text-align: center;
 
@@ -39,23 +24,29 @@ body {
     margin: 30px auto;
     background-color: gray;
   }
-
-/*
-  .transform{
-    $range : 200px;
-    $range_ : (-1*$range);
-    .blue{
-      @include trans(blue, 1, $range_, $range);
-    }
-    .red{
-      @include trans(red, 2, $range_, $range_);
-    }
-    .yellow{
-      @include trans(yellow, 3, $range, $range_);
-    }
-    .green{
-      @include trans(green, 4, $range, $range);
-    }
-  }
-  */
+}
+.demo-layout-transparent {
+  //background-image: url("/green-top.jpg");
+}
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: white;
+}
+.bg-slider {
+	width: 100vw;
+	height: 100vh;
+	background-position:center center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.bg-slider__title{
+	color: #fff;
+	font-size: 48px;
+	line-height: 1.5;
+	font-weight: bold;
+	text-align:center;
+	text-shadow: 1px 1px 1px #000;
 }

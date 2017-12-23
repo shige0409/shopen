@@ -1,18 +1,18 @@
-.container
-  .logo
-    %h1 Home#top
-  %nav.container.red
-    - h1 = 'ホームページ'
-    %h1="h1=> #{h1}"
-    %p Find me in app/views/home/top.html.haml
-  .login-form
-    %p
-      %input{'type': 'text', 'placeholder': 'name'}
-      %input{'type': 'password'}
-    %p
-      %input{'type': 'submit'}
-  .transform
-    .blue
-    .red
-    .yellow
-    .green
+- links = ['About', 'Help', 'Top', 'Login']
+.bg-slider
+  .demo-layout-transparent.mdl-layout.mdl-js-layout
+    %header.mdl-layout__header.mdl-layout__header--transparent
+      .mdl-layout__header-row
+        %span.mdl-layout-title FLIT
+        .mdl-layout-spacer
+        %nav.mdl-navigation
+          - links.each do |link|
+            %a.mdl-navigation__link{href: '#'}= link
+    .mdl-layout__drawer
+      %span.mdl-layout-titleTitle
+      %nav.mdl-navigation
+        - links.each do |link|
+          %a.mdl-navigation__link{href: '#'}= link
+    %main.mdl-layout__content
+      %h1.bg-slider__title SNS × フリマ
+      %h2 新感覚のフリマを体験しよう
