@@ -1,18 +1,20 @@
-- links = ['About', 'Help', 'Top', 'Login']
+/- links = ['About':, 'Help', 'Top', 'Login']
+- links = {About: 'about_path'}
 .bg-slider
   .demo-layout-transparent.mdl-layout.mdl-js-layout
     %header.mdl-layout__header.mdl-layout__header--transparent
       .mdl-layout__header-row
-        %span.mdl-layout-title FLIT
+        %span.mdl-layout-title
+          = link_to 'FLIT', root_path
         .mdl-layout-spacer
         %nav.mdl-navigation
-          - links.each do |link|
-            %a.mdl-navigation__link{href: '#'}= link
+          - links.each do |key, value|
+            %a.mdl-navigation__link{href: send(value)}= key
     .mdl-layout__drawer
       %span.mdl-layout-titleTitle
       %nav.mdl-navigation
-        - links.each do |link|
-          %a.mdl-navigation__link{href: '#'}= link
+        - links.each do |key, value|
+          %a.mdl-navigation__link{href: send(value)}= value
     %main.mdl-layout__content
       %h1.bg-slider__title SNS × フリマ
       %h2 新感覚のフリマを体験しよう

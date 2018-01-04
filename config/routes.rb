@@ -4,8 +4,4 @@ Rails.application.routes.draw do
  #get '/' => 'home#top'と同じ
   get '/about', to: 'home#about'
 
-  get 'users/new', to: 'users#new'
-
-  get 'users/show', to: 'users#show'
-
 end
