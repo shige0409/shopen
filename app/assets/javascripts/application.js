@@ -12,9 +12,10 @@
 //
 //= require rails-ujs
 //= require jquery
-//= require bootstrap
-//= require turbolinks
+// require bootstrap
+// require turbolinks
 //= require_tree
+//= require material
 jQuery(function($) {
     $('.bg-slider').bgSwitcher({
         images: ['home_images/green.jpg','home_images/blue.jpg','home_images/asphalt.jpg','home_images/orange.jpg', 'home_images/red.jpg'],
