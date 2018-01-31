@@ -7,6 +7,9 @@
     %title= FlitApp
     = render 'layouts/rails_default'
   %body
-    = render 'layouts/header'
-    = yield
-    = render 'layouts/footer'
+    .bg-slider
+      .demo-layout-transparent.mdl-layout.mdl-js-layout
+        = render 'layouts/header'
+        %main.mdl-layout__content
+          = yield
+        = render 'layouts/footer'
