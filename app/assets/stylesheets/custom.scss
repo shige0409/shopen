@@ -48,3 +48,11 @@ form input[type="submit"] {
 .clear {
     clear: both;
   }
+
+/* material design lite extends */
+.demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
+  padding-right: 0;
+}
+.mdl-layout__header{
+  background-color: transparent;
+}
