@@ -1,0 +1,60 @@
+<!-- Square card -->
+<style>
+.demo-card-square.mdl-card {
+  width: 320px;
+  height: 320px;
+}
+.demo-card-square > .mdl-card__title {
+  color: #fff;
+  background-image: url('top.jpg');
+  background-size: cover;
+}
+</style>
+
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--4-col">
+    <%= render 'shop_card' %>
+  </div>
+  <div class="mdl-cell mdl-cell--4-col">
+    <%= render 'shop_card' %>
+  </div>
+  <div class="mdl-cell mdl-cell--4-col">
+    <%= render 'shop_card' %>
+  </div>
+</div>
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--4-col">
+    <%= render 'shop_card' %>
+  </div>
+  <div class="mdl-cell mdl-cell--4-col">
+    <%= render 'shop_card' %>
+  </div>
+  <div class="mdl-cell mdl-cell--4-col">
+    <%= render 'shop_card' %>
+  </div>
+</div>
+<button type="button" class="mdl-button show-modal mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">出店する</button>
+<dialog class="mdl-dialog">
+  <div class="mdl-dialog__content">
+    <p>
+      Allow this site to collect usage data to improve your experience?
+    </p>
+  </div>
+  <div class="mdl-dialog__actions mdl-dialog__actions--full-width">
+    <button type="button" class="mdl-button">Agree</button>
+    <button type="button" class="mdl-button close">Disagree</button>
+  </div>
+</dialog>
+<script>
+  var dialog = document.querySelector('dialog');
+  var showModalButton = document.querySelector('.show-modal');
+  if (!dialog.showModal) {
+    dialogPolyfill.registerDialog(dialog);
+  }
+  showModalButton.addEventListener('click', function () {
+    dialog.showModal();
+  });
+  dialog.querySelector('.close').addEventListener('click', function () {
+    dialog.close();
+  });
+</script>
