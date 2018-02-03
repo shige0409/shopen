@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   get '/contact', to: 'home#contact'
   get '/test', to: 'home#test'
   #resources :users
+  #resources :shops do
+    #resources :products
+  # end
 end
