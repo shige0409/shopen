@@ -18,8 +18,8 @@
 //= require material
 jQuery(function($) {
     $('.bg-slider').bgSwitcher({
-        images: ['home_images/green.jpg','home_images/blue.jpg','home_images/asphalt.jpg','home_images/orange.jpg', 'home_images/red.jpg'],
-        interval: 4000, // 背景画像を切り替える間隔を指定 3000=3秒
+        images: ['/images/green.jpg','/images/blue.jpg','/images/asphalt.jpg','/images/orange.jpg', '/images/red.jpg'],
+        interval: 7000, // 背景画像を切り替える間隔を指定 3000=3秒
         loop: true, // 切り替えを繰り返すか指定 true=繰り返す　false=繰り返さない
         shuffle: true, // 背景画像の順番をシャッフルするか指定 true=する　false=しない
         effect: "drop", // エフェクトの種類をfade,blind,clip,slide,drop,hideから指定

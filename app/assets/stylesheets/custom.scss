@@ -1,15 +1,20 @@
 @import 'material';
-* {
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
+/** {
+  box-sizing: border-box;
+}*/
 html {
   font: 100%/1.5 'Helvetica Neue', 'Avenir Next', 'Hiragino Sans', sans-serif;
   line-height: 1.7;
   letter-spacing: 1px;
 }
 
-ul,li {
+li,
+ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -18,7 +23,6 @@ ul,li {
 a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 14px;
 }
 
 h1,
@@ -40,22 +44,41 @@ form input[type="submit"] {
   border: none;
   cursor: pointer;
   opacity: 0.8;
-  &:hover{
+
+  &:hover {
     opacity: 1.0;
   }
 }
 
 .clear {
-    clear: both;
-  }
+  clear: both;
+}
 
+.field_with_errors {
+  .form-control {
+    border-bottom: 1px solid red;
+  }
+}
 /* material design lite extends */
-.demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
+.demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type {
   padding-right: 0;
 }
-.mdl-layout__header{
+
+.mdl-layout__header {
   background-color: transparent;
 }
-.mdl-layout__content{
-  //margin-top: 50px;
+
+.mdl-layout__content {
+  margin-top: 50px;
+}
+
+.mdl-textfield__label{
+  color: rgba(255,255,255,0.8);
+}
+.mdl-textfield__input{
+  border-bottom: 1px solid rgba(255,255,255,0.8);
+  width: 100%;
+  margin-bottom: 20px;
+  height: auto !important;
+  @include box_sizing;
 }
