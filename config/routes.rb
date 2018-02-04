@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   root 'home#top' #=> root_path
   get '/test', to: 'home#test'
   get '/about', to: 'home#about'
