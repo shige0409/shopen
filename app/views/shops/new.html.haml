@@ -1,3 +1,4 @@
+= render 'shared/error_messages'
 %h1.bg-slider__title お店登録フォーム
 .mdl-grid
   .mdl-layout-spacer
@@ -14,7 +15,7 @@
         %span.mdl-textfield__error= "無効なメールアドレスです"
       .clear
       .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-color-text--white
-        = f.label :パスワード(半角英数字6文字以上), class:'mdl-textfield__label'
+        = f.label :パスワード, class:'mdl-textfield__label'
         = f.password_field :password, class: 'mdl-textfield__input form-control', pattern: '^([a-zA-Z0-9]{6,})$'
         %span.mdl-textfield__error= "半角英数字6文字以上です"
       .clear

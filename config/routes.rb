@@ -6,7 +6,4 @@ Rails.application.routes.draw do
   get '/signup', to: 'shops#new'
   post '/signup', to: 'shops#create'
   resources :shops, except: [:new, :create]
-  #resources :shops do
-    #resources :products
-  # end
 end

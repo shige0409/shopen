@@ -16,6 +16,8 @@
 // require turbolinks
 //= require_tree
 //= require material
+//= require toastr
+
 jQuery(function($) {
     $('.bg-slider').bgSwitcher({
         images: ['/images/green.jpg','/images/blue.jpg','/images/asphalt.jpg','/images/orange.jpg', '/images/red.jpg'],

@@ -1,4 +1,5 @@
 @import 'material';
+@import 'toastr';
 @mixin box_sizing {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -71,14 +72,16 @@ form input[type="submit"] {
 .mdl-layout__content {
   margin-top: 50px;
 }
-
+.mdl-textfield{
+  width: 400px;
+  margin-bottom: 25px;
+}
 .mdl-textfield__label{
   color: rgba(255,255,255,0.8);
 }
 .mdl-textfield__input{
   border-bottom: 1px solid rgba(255,255,255,0.8);
   width: 100%;
-  margin-bottom: 20px;
   height: auto !important;
   @include box_sizing;
 }

@@ -1,4 +1,8 @@
 class ShopsController < ApplicationController
+
+  def show
+    @shop = Shop.find_by(id: params[:id])
+  end
   def new
     @shop = Shop.new
   end
@@ -6,7 +10,8 @@ class ShopsController < ApplicationController
   def create
     @shop = Shop.new(shop_params)
     if @shop.save
-
+      flash[:notice] = '営業を開始しました'
+      redirect_to @shop
     else
       render 'new'
     end
