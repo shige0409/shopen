@@ -5,10 +5,10 @@ Rails.application.routes.draw do
   get '/test', to: 'home#test'
   get '/about', to: 'home#about'
   get '/contact', to: 'home#contact'
-  get '/signup', to: 'shops#new'
-  post '/signup', to: 'shops#create'
-  get '/login', to: 'sessions#new'
-  post '/login', to: 'sessions#create'
-  delete '/logout', to: 'sessions#destroy'
+  get '/start', to: 'shops#new'
+  post '/start', to: 'shops#create'
+  get '/open', to: 'sessions#new'
+  post '/open', to: 'sessions#create'
+  delete '/close', to: 'sessions#destroy'
   resources :shops, except: [:new, :create]
 end
