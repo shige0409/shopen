@@ -1,4 +1,7 @@
-- links = {Test: 'test_path', About: 'about_path', Contact:'contact_path', '出店する': 'start_path', '営業開始': 'open_path'}
+- if opening?
+  - links = {Test: 'test_path', About: 'about_path', Contact:'contact_path', '営業終了': 'close_path'}
+- else
+  - links = {Test: 'test_path', About: 'about_path', Contact:'contact_path', '出店する': 'start_path', '営業開始': 'open_path'}
 %header.mdl-layout__header.mdl-layout__header--waterfall
   .mdl-layout__header-row
     %span.mdl-layout-title

@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   post '/start', to: 'shops#create'
   get '/open', to: 'sessions#new'
   post '/open', to: 'sessions#create'
-  delete '/close', to: 'sessions#destroy'
+  get '/close', to: 'sessions#destroy'
   resources :shops, except: [:new, :create]
 end

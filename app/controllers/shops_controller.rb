@@ -10,6 +10,7 @@ class ShopsController < ApplicationController
   def create
     @shop = Shop.new(shop_params)
     if @shop.save
+      open @shop
       flash[:notice] = '営業を開始しました'
       redirect_to @shop
     else
