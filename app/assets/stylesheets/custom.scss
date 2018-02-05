@@ -5,13 +5,11 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-/** {
-  box-sizing: border-box;
-}*/
+
 html {
   font: 100%/1.5 'Helvetica Neue', 'Avenir Next', 'Hiragino Sans', sans-serif;
-  line-height: 1.7;
-  letter-spacing: 1px;
+  //line-height: 1.7;
+  //letter-spacing: 1px;
 }
 
 li,
@@ -35,7 +33,7 @@ h6,
 p {
   margin: 0;
 }
-
+/*
 input {
   background-color: transparent;
   outline-width: 0;
@@ -50,6 +48,7 @@ form input[type="submit"] {
     opacity: 1.0;
   }
 }
+*/
 
 .clear {
   clear: both;
