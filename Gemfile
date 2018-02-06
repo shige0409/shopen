@@ -8,17 +8,20 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
-gem 'material_design_lite-sass'
 gem 'puma', '~> 3.7'
-gem "haml-rails"
 gem 'bcrypt'
 gem 'toastr-rails'
 gem 'jquery-rails'
+gem "haml-rails"
 gem 'sass-rails', '~> 5.0'
+gem 'material_design_lite-sass'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+gem 'carrierwave'
+gem 'mini_magick'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
