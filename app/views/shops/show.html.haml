@@ -1,2 +1,37 @@
-%h1= @shop.name
-%p= @shop.email
+%h1.bg-slider__title= @shop.name
+%button#show-dialog.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-button--colored
+  %i.material-icons add
+.mdl-grid
+  .mdl-layout-spacer
+  .mdl-cell.mdl-cell--8-col
+    %dialog
+      %h4.mdl-dialog__title= '出品フォーム'
+      .mdl-dialog__content
+        = render 'products/product_form'
+      .mdl-dialog__actions
+        %button.mdl-button.close= 'キャンセル'
+  .mdl-layout-spacer
+/ haml api document
+:javascript
+  var dialog = document.querySelector('dialog');
+  var showDialogButton = document.querySelector('#show-dialog');
+  if (! dialog.showModal) {
+    dialogPolyfill.registerDialog(dialog);
+  }
+  showDialogButton.addEventListener('click', function() {
+    dialog.showModal();
+  });
+  dialog.querySelector('.close').addEventListener('click', function() {
+    dialog.close();
+  });
+  /*$(document).on('click touched', function(e){
+    if(!$(e.target).closest('dialog').length){
+    dialog.close();
+    }
+  })
+  */
+:css
+  dialog{
+  border: initial;
+  background-color: #ddd;
+  }

@@ -17,7 +17,7 @@ class ShopsController < ApplicationController
       render 'new'
     end
   end
-  
+
   private
 
     def shop_params

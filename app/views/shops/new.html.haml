@@ -22,7 +22,7 @@
       .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-color-text--white
         = f.label :'再確認', class:'mdl-textfield__label'
         = f.password_field :password_confirmation, class: 'mdl-textfield__input form-control', pattern: '^([a-zA-Z0-9]{6,})$'
-        %span.mdl-textfield__error= "英数字6文字以上です"
+        %span.mdl-textfield__error= "半角英数字6文字以上です"
       .clear
       = f.submit "出店する", class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
   .mdl-layout-spacer
