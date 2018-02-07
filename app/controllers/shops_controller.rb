@@ -1,10 +1,13 @@
 class ShopsController < ApplicationController
-
+  PER = 24
   def index
+    @shops = Shop.page(params[:page]).per(PER)
   end
+
   def show
     @shop = Shop.find_by(id: params[:id])
   end
+  
   def new
     @shop = Shop.new
   end

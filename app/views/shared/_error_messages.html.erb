@@ -1,7 +1,0 @@
-<% if @shop.errors.any? %>
-  <script type="text/javascript">
-    <% @shop.errors.full_messages.each do |msg| %>
-      toastr['error']('<%=msg %>');
-    <% end %>
-  </script>
-<% end %>
