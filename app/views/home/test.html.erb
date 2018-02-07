@@ -1,13 +1,29 @@
 <!-- Square card -->
 <style>
-.demo-card-square.mdl-card {
-  width: 320px;
-  height: 320px;
+.demo-card-square.mdl-card{
+  width: 300px;
+  height: 300px;
 }
 .demo-card-square > .mdl-card__title {
   color: #fff;
   background-image: url('/images/shop.jpg');
   background-size: cover;
+}
+.demo-card-image.mdl-card {
+  width: 160px;
+  height: 160px;
+  background-image: url('/images/shop.jpg');
+  background-size: cover;
+}
+.demo-card-image > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.demo-card-image__filename {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
 }
 </style>
 <h1></h1>
@@ -46,26 +62,11 @@
   </div>
 </div>
 <div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--4-col">
-    <%= render 'shop_card' %>
-  </div>
-  <div class="mdl-cell mdl-cell--4-col">
-    <%= render 'shop_card' %>
-  </div>
-  <div class="mdl-cell mdl-cell--4-col">
-    <%= render 'shop_card' %>
-  </div>
-</div>
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--4-col">
-    <%= render 'shop_card' %>
-  </div>
-  <div class="mdl-cell mdl-cell--4-col">
-    <%= render 'shop_card' %>
-  </div>
-  <div class="mdl-cell mdl-cell--4-col">
-    <%= render 'shop_card' %>
-  </div>
+  <% 6.times do %>
+    <div class="mdl-cell mdl-cell--2-col">
+      <%= render 'product_card' %>
+    </div>
+  <% end %>
 </div>
 <button type="button" class="mdl-button show-modal mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">出店する</button>
 <dialog class="mdl-dialog">

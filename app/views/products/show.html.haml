@@ -1,2 +1,4 @@
-%h1 Products#show
-%p Find me in app/views/products/show.html.haml
+= @product.name
+= @product.detail
+= "#{@product.price}円"
+= image_tag @product.picture.url if @product.picture?
