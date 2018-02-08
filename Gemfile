@@ -12,6 +12,7 @@ gem 'puma', '~> 3.7'
 gem 'bcrypt'
 gem 'toastr-rails'
 gem 'kaminari'
+gem 'kaminari-bootstrap'
 gem 'faker'
 gem 'jquery-rails'
 gem "haml-rails"

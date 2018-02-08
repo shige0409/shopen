@@ -1,0 +1,27 @@
+<div class="mdl-cell mdl-cell--3-col">
+  <div class="demo-card-square mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title mdl-card--expand" id="shop-<%= shop.id %>">
+      <h2 class="mdl-card__title-text">
+        <%= shop.name %>
+      </h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+      中古から新品まで多くの品を取り揃えております。 特にiPhone類はどこよりも安いです。
+    </div>
+    <div class="mdl-card__actions.mdl-card--border">
+      <a href="#" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">入店する</a>
+    </div>
+  </div>
+</div>
+<% if shop.picture? %>
+<style>
+  .demo-card-square > "#shop-<%= shop.id %>"{
+    background-image: url("<%= shop.picture.url%>");
+  }
+<% else %>
+  <style>
+    .demo-card-square > .mdl-card__title {
+      background-image: url("/images/shop.jpg");
+    }
+  </style>
+<% end %>

@@ -4,7 +4,7 @@ Shop.create!(name:  "Sample Shop",
              password_confirmation: "foobar")
 
 50.times do |n|
-  name  = Faker::Name.name
+  name  = Faker::App.name
   email = "example-#{n+1}@railstutorial.org"
   password = "password"
   Shop.create!(name:  name,

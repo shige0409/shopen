@@ -7,7 +7,7 @@ class ShopsController < ApplicationController
   def show
     @shop = Shop.find_by(id: params[:id])
   end
-  
+
   def new
     @shop = Shop.new
   end
@@ -25,7 +25,7 @@ class ShopsController < ApplicationController
 
   private
 
-    def shop_params
-      params.require(:shop).permit(:name, :email, :password, :password_confirmation, :picture)
-    end
+  def shop_params
+    params.require(:shop).permit(:name, :email, :password, :password_confirmation, :picture)
+  end
 end
