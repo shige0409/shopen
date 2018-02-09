@@ -1,2 +1,27 @@
 .mdl-grid
-  = render 'shop_card', shop: @shop
+  .mdl-cell.mdl-cell--4-col
+    .demo-card-wide.mdl-card.mdl-shadow--2dp
+      .mdl-card__title{id: "shop-#{@shop.id}"}
+        %h2.mdl-card__title-text= @shop.name
+      %textarea.mdl-card__supporting-text{rows: '10', cols: '50', readonly: true}
+        = @shop.profile
+      .mdl-card__actions.mdl-card--border
+        = link_to '改修する', edit_shop_path, class: 'mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect'
+  - @products.each do |product|
+    .mdl-cell.mdl-cell--2-col
+      .demo-card-image.mdl-card.mdl-shadow--2dp{id: "product-#{product.id}"}
+        .mdl-card__title.mdl-card--expand
+        .mdl-card__actions
+          = link_to(content_tag(:span, product.name, class:'demo-card-image__filename'), product_path(product))
+
+= render 'products/form_button'
+
+:css
+  #shop-#{@shop.id}{
+  background-image: url("#{@shop.picture.url}");
+  }
+- @products.each do |product|
+  :css
+    #product-#{product.id}{
+      background-image: url("#{product.picture.url}")
+    }

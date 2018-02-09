@@ -8,15 +8,12 @@ class ProductsController < ApplicationController
     @product = Product.find_by(id: params[:id])
   end
 
-  # get => /shops/:shop_id/products/new
-  def new
-  end
 
   def create
     @product = current_shop.products.build(product_params)
     if @product.save
       flash[:notice] = '出品しました'
-      redirect_to @product
+      redirect_to current_shop
     else
       @shop = current_shop
       render 'shops/show'

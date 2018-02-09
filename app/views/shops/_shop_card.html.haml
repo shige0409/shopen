@@ -2,7 +2,7 @@
   .demo-card-wide.mdl-card.mdl-shadow--2dp
     .mdl-card__title{id: "shop-#{shop.id}"}
       %h2.mdl-card__title-text= shop.name
-    .mdl-card__supporting-text
+    %textarea.mdl-card__supporting-text{rows: '10', cols: '50', readonly: true}
       = shop.profile
     .mdl-card__actions.mdl-card--border
       = link_to '改修する', edit_shop_path, class: 'mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect'
