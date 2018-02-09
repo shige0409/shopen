@@ -1,6 +1,6 @@
 class Shop < ApplicationRecord
   before_save { email.downcase! }
-  has_many :products
+  has_many :products, dependent: :destroy
   validates :name, presence: true, length: { maximum: 20 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
   validates :email, presence:   true, length: { maximum: 100 },
@@ -11,4 +11,5 @@ class Shop < ApplicationRecord
   validates :password, presence: true,
                        length: { minimum: 6 }, allow_nil: true
   mount_uploader :picture, PictureUploader
+  validate :picture_size
 end

@@ -5,7 +5,7 @@ class CreateShops < ActiveRecord::Migration[5.1]
       t.string :email
       t.string :password_digest
       t.string :profile
-      t.string :piture
+      t.string :picture
       t.integer :money
       t.integer :owner_id
 

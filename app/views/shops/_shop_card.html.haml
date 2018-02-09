@@ -1,0 +1,15 @@
+.mdl-cell.mdl-cell--4-col
+  .demo-card-wide.mdl-card.mdl-shadow--2dp
+    .mdl-card__title{id: "shop-#{shop.id}"}
+      %h2.mdl-card__title-text= shop.name
+    .mdl-card__supporting-text
+      = shop.profile
+    .mdl-card__actions.mdl-card--border
+      = link_to '改修する', edit_shop_path, class: 'mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect'
+.mdl-cell.mdl-cell--3-col
+  = render 'products/form_button'
+.mdl-cell.mdl-cell--3col
+:scss
+  #shop-#{shop.id}{
+    background-image: url("#{shop.picture.url}");
+  }

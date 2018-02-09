@@ -93,6 +93,18 @@ form input[type="submit"] {
   background-image: url("/images/shop.jpg");
 }
 
+.demo-card-wide.mdl-card {
+  width: 400px;
+  /*margin: 0 auto;*/
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 300px;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
 /* pagination */
 .pagination{
   display: flex;
