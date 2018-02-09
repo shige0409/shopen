@@ -2,6 +2,7 @@
   - links = {Test: 'test_path',
              About: 'about_path',
              Contact:'contact_path',
+             MyPage: 'current_shop',
              '営業終了': 'close_path'}
 - else
   - links = {Test: 'test_path',
@@ -24,9 +25,10 @@
     .mdl-layout-spacer
     %nav.mdl-navigation
       - links.each do |key, value|
-        %a.mdl-navigation__link{href: send(value)}= key
+        = link_to key, send(value), class: 'mdl-navigation__link'
 .mdl-layout__drawer
   %span.mdl-layout-title SHOPEN
   %nav.mdl-navigation
     - links.each do |key, value|
-      %a.mdl-navigation__link{href: send(value)}= key
+      = link_to key, send(value), class: 'mdl-navigation__link'
+      /%a.mdl-navigation__link{href: send(value)}= key

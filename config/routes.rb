@@ -5,12 +5,13 @@ Rails.application.routes.draw do
   get '/contact', to: 'home#contact'
   get '/start', to: 'shops#new'
   post '/start', to: 'shops#create'
-  delete 'close', to: 'shops#destroy'
+  delete '/close', to: 'shops#destroy'
   get '/open', to: 'sessions#new'
   post '/open', to: 'sessions#create'
   get '/close', to: 'sessions#destroy'
-  resources :shops
-  resources :products
+  resources :shops, except: %i[new create destroy] do
+    resources :products, except: %i[new edit], shallow: true
+  end
   #resources :shops, except: %i[new create destroy] do
     #resources :products, shallow: true
   #end
