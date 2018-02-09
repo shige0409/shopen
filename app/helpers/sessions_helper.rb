@@ -12,6 +12,10 @@ module SessionsHelper
     @current_shop ||= Shop.find_by(id: session[:shop_id])
   end
 
+  def current_shop?(shop)
+    shop == current_shop
+  end
+
   def opening?
     !current_shop.nil?
   end

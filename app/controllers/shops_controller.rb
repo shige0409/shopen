@@ -1,4 +1,6 @@
 class ShopsController < ApplicationController
+  before_action :should_open_shop, only: %i[edit update]
+  before_action :correct_shop, only: %i[edit update]
   PER = 24
   def index
     @shops = Shop.page(params[:page]).per(PER)
@@ -45,5 +47,17 @@ class ShopsController < ApplicationController
 
   def shop_params
     params.require(:shop).permit(:name, :email, :profile, :password, :password_confirmation, :picture)
+  end
+
+  def should_open_shop
+    unless opening?
+      flash[:alert] = '営業を開始してください'
+      redirect_to open_url
+    end
+  end
+
+  def correct_shop
+    @shop = Shop.find params[:id]
+    redirect_to root_url unless current_shop? @shop
   end
 end
