@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20180207050422) do
     t.integer "shop_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["shop_id", "created_at"], name: "index_products_on_shop_id_and_created_at"
     t.index ["shop_id"], name: "index_products_on_shop_id"
   end
 
@@ -33,7 +34,6 @@ ActiveRecord::Schema.define(version: 20180207050422) do
     t.integer "owner_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["created_at"], name: "index_shops_on_shop_id_and_created_at"
     t.index ["email"], name: "index_shops_on_email", unique: true
     t.index ["name"], name: "index_shops_on_name"
   end
