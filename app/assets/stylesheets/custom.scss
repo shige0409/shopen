@@ -5,7 +5,7 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
+/* ---------- common css ------------*/
 html {
   font: 100%/1.5 'Helvetica Neue', 'Avenir Next', 'Hiragino Sans', sans-serif;
   //line-height: 1.7;
@@ -38,11 +38,32 @@ p {
   clear: both;
 }
 
+/* ------------ error css ------------------*/
 .field_with_errors {
   .form-control {
     border-bottom: 1px solid red;
   }
 }
+
+/* -------------- top css ------------------*/
+a.store{
+  display: inline-block;
+  .md-100{
+    font-size: 100px;
+    margin-top: 100px;
+    transition: 0.5s;
+  }
+  p{
+    opacity: 0;
+  }
+  &:hover > .md-100{
+    transform: scale(1.2);
+  }
+  &:hover > p{
+    opacity: 1.0;
+  }
+}
+
 /* material design lite extends */
 .demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type {
   padding-right: 0;
@@ -110,23 +131,7 @@ textarea.mdl-card__supporting-text{
   font-weight: 500;
 }
 
-a.store{
-  display: inline-block;
-  .md-100{
-    font-size: 100px;
-    margin-top: 100px;
-    transition: 0.5s;
-  }
-  p{
-    opacity: 0;
-  }
-  &:hover > .md-100{
-    transform: scale(1.2);
-  }
-  &:hover > p{
-    opacity: 1.0;
-  }
-}
+
 /* pagination */
 .pagination{
   display: flex;
