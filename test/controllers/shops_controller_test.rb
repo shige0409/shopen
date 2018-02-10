@@ -2,8 +2,7 @@ require 'test_helper'
 
 class ShopsControllerTest < ActionDispatch::IntegrationTest
   test "should get new" do
-    get shops_new_url
+    get start_path
     assert_response :success
   end
-
 end
