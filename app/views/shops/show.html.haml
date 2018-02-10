@@ -12,7 +12,7 @@
       .demo-card-image.mdl-card.mdl-shadow--2dp{id: "product-#{product.id}"}
         .mdl-card__title.mdl-card--expand
         .mdl-card__actions
-          = link_to(content_tag(:span, product.name, class:'demo-card-image__filename'), product_path(product))
+          = link_to(content_tag(:span, "#{product.name} | #{product.price}円", class:'demo-card-image__filename'), product_path(product))
 
 = render 'products/form_button'
 
