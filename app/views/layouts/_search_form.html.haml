@@ -1,0 +1,6 @@
+/ = form_tag(shops_path, method: "get") do
+/ = text_field_tag(:search, class:'mdl-textfield__input', id:'waterfall-exp')
+/ = submit_tag("Search")
+/ <input class="mdl-textfield__input" type="text" name="sample",id="waterfall-exp">
+/= text_field_tag{:search, class:'mdl-textfield__input', id:'waterfall-exp'}
+%input.mdl-text_field__input#waterfall-exp

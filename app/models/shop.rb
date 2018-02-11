@@ -12,4 +12,13 @@ class Shop < ApplicationRecord
                        length: { minimum: 6 }, allow_nil: true
   mount_uploader :picture, PictureUploader
   validate :picture_size
+
+  def self.search(word)
+    if word
+      Shop.where('name LIKE ?', "%#{word}%")
+    else
+      Shop.all
+    end
+  end
+  
 end
