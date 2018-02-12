@@ -1,0 +1,12 @@
+<h1 class="bg-slider__title">商品一覧</h1>
+<%= paginate @products %>
+<% @products.each_with_index do |product, index| %>
+  <% if index % 4 == 0 %>
+    <div class="mdl-grid">
+  <% end %>
+    <%= render 'product', product: product %>
+  <% if index % 4 == 3 || index == (@products.length - 1) %>
+    </div>
+  <% end %>
+<% end %>
+<%= paginate @products %>

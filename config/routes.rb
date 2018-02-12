@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   post '/open', to: 'sessions#create'
   get '/close', to: 'sessions#destroy'
   resources :shops, except: %i[new create destroy] do
-    resources :products, except: %i[new edit], shallow: true
+    resources :products, except: %i[new], shallow: true
   end
   #resources :shops, except: %i[new create destroy] do
     #resources :products, shallow: true

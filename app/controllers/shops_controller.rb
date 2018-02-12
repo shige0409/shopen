@@ -3,7 +3,7 @@ class ShopsController < ApplicationController
   before_action :correct_shop, only: %i[edit update]
   PER = 24
   def index
-    @shops = Shop.page(params[:page]).per(PER)
+    @shops = Shop.search(params[:search]).page(params[:page]).per(PER)
   end
 
   def show
@@ -41,7 +41,8 @@ class ShopsController < ApplicationController
   end
 
   def destroy
-
+    Shop.find(params[:id]).destroy
+    redirect_to root_url
   end
 
   private
@@ -59,6 +60,9 @@ class ShopsController < ApplicationController
 
   def correct_shop
     @shop = Shop.find params[:id]
-    redirect_to root_url unless current_shop? @shop
+    unless current_shop? @shop
+      flash[:notice] = '自分のお店ではありません'
+      redirect_to root_url
+    end
   end
 end

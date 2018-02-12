@@ -9,7 +9,7 @@
       <%= shop.profile %>
     </div>
     <div class="mdl-card__actions mdl-card--border">
-      <a href="#" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">入店する</a>
+      <%= link_to '入店する', shop_path(shop.id), class:'mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect'%>
     </div>
   </div>
 </div>
@@ -18,5 +18,5 @@
   #shop-<%= shop.id %>{
     background-image: url("<%= shop.picture.url %>");
   }
-<style>
+</style>
 <% end %>

@@ -1,2 +1,18 @@
-%h1 Products#edit
-%p Find me in app/views/products/edit.html.haml
+= form_for(@product) do |f|
+  .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-color-text--white
+    = f.label :'品名', class:'mdl-textfield__label'
+    = f.text_field :name, class: 'mdl-textfield__input form-control', pattern: '.{1,}'
+    %span.mdl-textfield__error= ""
+  .clear
+  .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-color-text--white
+    = f.label :'商品説明', class:'mdl-textfield__label'
+    = f.text_area :detail, class: 'mdl-textfield__input form-control', rows:'10', cols: '50'
+    %span.mdl-textfield__error= ""
+  .clear
+  .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-color-text--white
+    = f.label :'価格', class:'mdl-textfield__label'
+    = f.text_field :price, class: 'mdl-textfield__input form-control', pattern: '-?[0-9]*(\.[0-9]+)?'
+    %span.mdl-textfield__error= "数字ではありません"
+  .clear
+  = f.file_field :picture
+  = f.submit "出品する", class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
