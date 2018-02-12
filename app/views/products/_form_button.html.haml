@@ -7,7 +7,10 @@
       %dialog
         %h4.mdl-dialog__title= '出品フォーム'
         .mdl-dialog__content
-          = render 'products/product_form'
+          = render 'products/product_form',
+          object: current_shop.products.build,
+          url: shop_products_path(current_shop),
+          text_btn: '出品する'
         .mdl-dialog__actions
           %button.mdl-button.close= 'キャンセル'
     .mdl-layout-spacer

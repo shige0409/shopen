@@ -1,4 +1,4 @@
-= form_for(current_shop.products.build, url: shop_products_path(current_shop)) do |f|
+= form_for(object, url: url) do |f|
   .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-color-text--white
     = f.label :'品名', class:'mdl-textfield__label'
     = f.text_field :name, class: 'mdl-textfield__input form-control', pattern: '.{1,}'
@@ -15,4 +15,4 @@
     %span.mdl-textfield__error= "数字ではありません"
   .clear
   = f.file_field :picture
-  = f.submit "出品する", class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+  = f.submit text_btn, class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
